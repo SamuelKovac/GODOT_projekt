@@ -1,5 +1,5 @@
 # GODOT_projekt
-Sem hádzať všetko súvisiace s projektom
+Sem hádzať všetko súvisiace s projektom.
 
 Tu je cca ako bude vyzerať štruktúra projektu a všetky body.
 
