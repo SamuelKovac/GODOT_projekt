@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://r2c4kc85bdrf"]
+
+[ext_resource type="Script" path="res://lvl_0_(hlavné_menu).gd" id="1_8b1uv"]
+
+[sub_resource type="Theme" id="Theme_n8aav"]
+
+[sub_resource type="FontFile" id="FontFile_45dgn"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[node name="lvl_0 (hlavné menu)" type="Node2D"]
+script = ExtResource("1_8b1uv")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlayButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 229.0
+offset_right = 619.0
+offset_bottom = 296.0
+theme = SubResource("Theme_n8aav")
+theme_override_fonts/font = SubResource("FontFile_45dgn")
+text = "Play
+"
+
+[node name="QuitButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 323.0
+offset_right = 619.0
+offset_bottom = 386.0
+text = "Quit"
+
+[connection signal="pressed" from="Control/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Control/QuitButton" to="." method="_on_quit_button_pressed"]
