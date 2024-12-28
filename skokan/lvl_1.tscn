@@ -1,8 +1,14 @@
-[gd_scene load_steps=8 format=4 uid="uid://cl6x7ifljr6eu"]
+[gd_scene load_steps=14 format=4 uid="uid://cl6x7ifljr6eu"]
 
 [ext_resource type="Texture2D" uid="uid://c806kork7pplp" path="res://sprites/icon.svg" id="1_djyl4"]
 [ext_resource type="Script" path="res://player.gd" id="1_ltxrg"]
 [ext_resource type="Texture2D" uid="uid://dqs1kfum6aqlk" path="res://sprites/mk_16_16_nature_tileset_godot/tileset_mk_16_16_nature_tileset_godot.png" id="2_7cfwx"]
+[ext_resource type="Texture2D" uid="uid://b1uk0bg5pylos" path="res://backgrounds/level 1/platformer_background_3/Layers/layer07_Sky.png" id="4_ro26i"]
+[ext_resource type="Texture2D" uid="uid://ckfjt6wdvhxe8" path="res://backgrounds/level 1/platformer_background_3/Layers/layer06_Rocks.png" id="5_vv1c2"]
+[ext_resource type="Texture2D" uid="uid://c4c35q5nxql83" path="res://backgrounds/level 1/platformer_background_3/Layers/layer04_Hills_2.png" id="6_lyuuq"]
+[ext_resource type="Texture2D" uid="uid://kr2fsxu4k2qu" path="res://backgrounds/level 1/platformer_background_3/Layers/layer05_Clouds.png" id="7_tcsrg"]
+[ext_resource type="Texture2D" uid="uid://vk4k0v6agj0e" path="res://backgrounds/level 1/platformer_background_3/Layers/layer02_Trees.png" id="8_jmewx"]
+[ext_resource type="Texture2D" uid="uid://bh4si40o7enql" path="res://backgrounds/level 1/platformer_background_3/Layers/layer01_Ground.png" id="9_0ywmg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_agamq"]
 radius = 7.0
@@ -423,7 +429,44 @@ use_kinematic_bodies = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
-position = Vector2(608.5, 298)
-scale = Vector2(10.3672, 5.07813)
-texture = ExtResource("1_djyl4")
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Layer07Sky" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(569, 271)
+scale = Vector2(0.720833, 0.6)
+texture = ExtResource("4_ro26i")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Layer06Rocks" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(568, 258)
+scale = Vector2(0.720888, 0.449946)
+texture = ExtResource("5_vv1c2")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(568.328, 331.5)
+scale = Vector2(0.720796, 0.482407)
+texture = ExtResource("6_lyuuq")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(620.482, 188.372)
+scale = Vector2(0.669252, 0.447911)
+texture = ExtResource("7_tcsrg")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(171, 379)
+scale = Vector2(0.302708, 0.202594)
+texture = ExtResource("8_jmewx")
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2(568, 237.684)
+scale = Vector2(0.721597, 0.660525)
+texture = ExtResource("9_0ywmg")
