@@ -1,6 +1,6 @@
 [gd_scene load_steps=77 format=4 uid="uid://cl6x7ifljr6eu"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_ltxrg"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_ltxrg"]
 [ext_resource type="Texture2D" uid="uid://dqs1kfum6aqlk" path="res://sprites/mk_16_16_nature_tileset_godot/tileset_mk_16_16_nature_tileset_godot.png" id="2_7cfwx"]
 [ext_resource type="Texture2D" uid="uid://nrr6lpodccyn" path="res://Postava Sprite a jej ovládanie/fall/skeleton-fall_0.png" id="2_wgpg6"]
 [ext_resource type="Texture2D" uid="uid://d0pgw4j8d1gqd" path="res://Postava Sprite a jej ovládanie/fall/skeleton-fall_1.png" id="3_6lgic"]
@@ -290,9 +290,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3sit1"]
 size = Vector2(10, 28)
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ryq4x"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_p3ami"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_st07p"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40igb"]
 texture = ExtResource("2_7cfwx")
 13:0/0 = 0
 13:0/0/terrain_set = 0
@@ -673,11 +673,11 @@ texture = ExtResource("2_7cfwx")
 
 [sub_resource type="TileSet" id="TileSet_kuamr"]
 physics_layer_0/collision_layer = 1
-physics_layer_0/physics_material = SubResource("PhysicsMaterial_ryq4x")
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_p3ami")
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
-sources/5 = SubResource("TileSetAtlasSource_st07p")
+sources/5 = SubResource("TileSetAtlasSource_40igb")
 
 [node name="lvl1" type="Node2D"]
 
@@ -749,3 +749,4 @@ texture = ExtResource("6_yx03s")
 offset_left = 320.0
 offset_top = 180.0
 offset_bottom = 180.0
+metadata/_edit_use_anchors_ = true

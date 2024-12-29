@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://r2c4kc85bdrf"]
 
-[ext_resource type="Script" path="res://lvl_0_(hlavné_menu).gd" id="1_8b1uv"]
+[ext_resource type="Script" path="res://scripts/lvl_0_(hlavné_menu).gd" id="1_8b1uv"]
 [ext_resource type="Texture2D" uid="uid://cdfigntapkodk" path="res://backgrounds/level 0/bg_lvl_0.jpg" id="2_2joud"]
 
 [sub_resource type="FontFile" id="FontFile_34xkw"]
