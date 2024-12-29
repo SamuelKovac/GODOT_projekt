@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=3 uid="uid://bcoxtb5xlehmt"]
+
+[ext_resource type="Script" path="res://scripts/next_lvl.gd" id="1_ehlwl"]
+[ext_resource type="Texture2D" uid="uid://diacvtpqnfnk5" path="res://sprites/Dimensional_Portal.png" id="2_8jfne"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0ivxh"]
+radius = 21.2061
+height = 48.471
+
+[sub_resource type="Animation" id="Animation_xlna1"]
+resource_name = "anim_portal"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_b7hta"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5ni6r"]
+_data = {
+"RESET": SubResource("Animation_b7hta"),
+"anim_portal": SubResource("Animation_xlna1")
+}
+
+[node name="next_lvl" type="Area2D" groups=["Player"]]
+scale = Vector2(1.03487, 1)
+script = ExtResource("1_ehlwl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_8jfne")
+hframes = 3
+vframes = 2
+frame = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.966306, -5.96046e-08)
+rotation = -3.13551
+scale = Vector2(-0.297322, 0.610411)
+shape = SubResource("CapsuleShape2D_0ivxh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5ni6r")
+}
+autoplay = "anim_portal"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

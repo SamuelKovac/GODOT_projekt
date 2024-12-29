@@ -284,9 +284,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3sit1"]
 size = Vector2(10, 28)
 
-[node name="Player_node" type="Node2D"]
+[node name="Player_node" type="Node2D" groups=["Player"]]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Player"]]
 script = ExtResource("1_wat51")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
