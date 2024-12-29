@@ -1,12 +1,16 @@
-[gd_scene load_steps=7 format=4 uid="uid://beo4x6egv1oqn"]
+[gd_scene load_steps=11 format=4 uid="uid://beo4x6egv1oqn"]
 
 [ext_resource type="PackedScene" uid="uid://bdv58odhn65yh" path="res://scenes/player.tscn" id="1_8gw5b"]
 [ext_resource type="Texture2D" uid="uid://dqs1kfum6aqlk" path="res://sprites/mk_16_16_nature_tileset_godot/tileset_mk_16_16_nature_tileset_godot.png" id="2_7e5yt"]
 [ext_resource type="PackedScene" uid="uid://bcoxtb5xlehmt" path="res://scenes/next_lvl.tscn" id="3_envjm"]
+[ext_resource type="Texture2D" uid="uid://d284o161ogrme" path="res://sprites/Nature Landscapes Free Pixel Art/nature_4/1.png" id="4_c1yrd"]
+[ext_resource type="Texture2D" uid="uid://ddi1ek3dm5f07" path="res://sprites/Nature Landscapes Free Pixel Art/nature_4/2.png" id="5_hc3c2"]
+[ext_resource type="Texture2D" uid="uid://5gqya5avax40" path="res://sprites/Nature Landscapes Free Pixel Art/nature_4/3.png" id="6_i8nhp"]
+[ext_resource type="Texture2D" uid="uid://rir3w48pv40r" path="res://sprites/Nature Landscapes Free Pixel Art/nature_4/4.png" id="7_88m4o"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_p3ami"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6dgqe"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2fkif"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2wabe"]
 texture = ExtResource("2_7e5yt")
 13:0/0 = 0
 13:0/0/terrain_set = 0
@@ -387,11 +391,11 @@ texture = ExtResource("2_7e5yt")
 
 [sub_resource type="TileSet" id="TileSet_4prhs"]
 physics_layer_0/collision_layer = 1
-physics_layer_0/physics_material = SubResource("PhysicsMaterial_p3ami")
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_6dgqe")
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
-sources/5 = SubResource("TileSetAtlasSource_2fkif")
+sources/5 = SubResource("TileSetAtlasSource_2wabe")
 
 [node name="lvl2" type="Node2D"]
 
@@ -406,3 +410,41 @@ use_kinematic_bodies = true
 
 [node name="next_lvl" parent="." instance=ExtResource("3_envjm")]
 position = Vector2(720, 115)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-576, -270)
+motion_scale = Vector2(0, 0)
+
+[node name="Layer07Sky" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(784, 367)
+scale = Vector2(0.720833, 0.6)
+texture = ExtResource("4_c1yrd")
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 0)
+motion_mirroring = Vector2(415, 0)
+
+[node name="Layer06Rocks" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2(215, 45)
+scale = Vector2(0.720888, 0.449946)
+texture = ExtResource("5_hc3c2")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0)
+motion_mirroring = Vector2(415, 0)
+
+[node name="Layer06Rocks" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(212, 115)
+scale = Vector2(0.720888, 0.449946)
+texture = ExtResource("6_i8nhp")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.7, 0)
+motion_mirroring = Vector2(415, 0)
+
+[node name="Layer06Rocks" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(208, 121)
+scale = Vector2(0.720888, 0.449946)
+texture = ExtResource("7_88m4o")
