@@ -46,5 +46,5 @@ func _ready() -> void:
 	self.visible = false  # Hide the pause menu initially
 
 # Checks for ESC key input every frame
-func _process(delta: float):
+func _process(_delta):
 	test_esc()
