@@ -453,10 +453,7 @@ position = Vector2(977, 126)
 [node name="Coins" type="Node2D" parent="."]
 
 [node name="gcoin" parent="Coins" instance=ExtResource("9_yh7mv")]
-position = Vector2(192, 160)
-
-[node name="gcoin2" parent="Coins" instance=ExtResource("9_yh7mv")]
-position = Vector2(237, 166)
+position = Vector2(216, 158)
 
 [node name="gcoin3" parent="Coins" instance=ExtResource("9_yh7mv")]
 position = Vector2(323, 138)
@@ -505,12 +502,3 @@ position = Vector2(607, 27)
 
 [node name="gcoin14" parent="Coins" instance=ExtResource("9_yh7mv")]
 position = Vector2(686, 122)
-
-[node name="gcoin" parent="." instance=ExtResource("9_yh7mv")]
-position = Vector2(213, 163)
-
-[node name="gcoin2" parent="." instance=ExtResource("9_yh7mv")]
-position = Vector2(205, 145)
-
-[node name="gcoin3" parent="." instance=ExtResource("9_yh7mv")]
-position = Vector2(233, 148)
