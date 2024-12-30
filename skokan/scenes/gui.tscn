@@ -62,15 +62,8 @@ offset_top = 90.0
 offset_right = 1251.0
 offset_bottom = 132.0
 theme_override_font_sizes/font_size = 30
-text = "0/18"
+text = "0"
 horizontal_alignment = 2
-
-[node name="request" type="Label" parent="."]
-offset_left = 896.0
-offset_top = 130.0
-offset_right = 1252.0
-offset_bottom = 169.0
-text = "Collect atleast 10 coins to get to the next level"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1227, 51)
