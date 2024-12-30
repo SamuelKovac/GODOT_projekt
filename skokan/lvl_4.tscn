@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://d1lqvr2n7hwej" path="res://scenes/tile_map.tscn" id="1_ka54g"]
 [ext_resource type="PackedScene" uid="uid://bcoxtb5xlehmt" path="res://scenes/next_lvl.tscn" id="3_lk3tb"]
 [ext_resource type="Texture2D" uid="uid://d284o161ogrme" path="res://sprites/Nature Landscapes Free Pixel Art/nature_4/1.png" id="4_bsxyf"]
-[ext_resource type="Texture2D" uid="uid://ddi1ek3dm5f07" path="res://sprites/Nature Landscapes Free Pixel Art/nature_4/2.png" id="5_fvxm0"]
-[ext_resource type="Texture2D" uid="uid://5gqya5avax40" path="res://sprites/Nature Landscapes Free Pixel Art/nature_4/3.png" id="6_5jy86"]
-[ext_resource type="Texture2D" uid="uid://rir3w48pv40r" path="res://sprites/Nature Landscapes Free Pixel Art/nature_4/4.png" id="7_0jklj"]
+[ext_resource type="Texture2D" uid="uid://dhfilt2vylbyl" path="res://sprites/Glacial-mountains-parallax-background_vnitti/Layers/glacial_mountains.png" id="5_5hywq"]
+[ext_resource type="Texture2D" uid="uid://c0v1mknbtk4m5" path="res://sprites/Glacial-mountains-parallax-background_vnitti/Layers/clouds_bg.png" id="6_mkec5"]
+[ext_resource type="Texture2D" uid="uid://ueg3is1cplu0" path="res://sprites/Glacial-mountains-parallax-background_vnitti/Layers/clouds_mg_1.png" id="7_pm7kk"]
 [ext_resource type="PackedScene" uid="uid://b5cjqqs51kcse" path="res://scenes/gcoin.tscn" id="8_jg14l"]
 
 [node name="Node2D" type="Node2D"]
@@ -30,32 +30,32 @@ position = Vector2(784, 367)
 scale = Vector2(0.720833, 0.6)
 texture = ExtResource("4_bsxyf")
 
-[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.3, 0)
-motion_mirroring = Vector2(415, 0)
-
-[node name="Layer06Rocks" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
-position = Vector2(215, 45)
-scale = Vector2(0.720888, 0.449946)
-texture = ExtResource("5_fvxm0")
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.5, 0)
-motion_mirroring = Vector2(415, 0)
-
-[node name="Layer06Rocks" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2(212, 115)
-scale = Vector2(0.720888, 0.449946)
-texture = ExtResource("6_5jy86")
-
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.7, 0)
+motion_scale = Vector2(0.2, 0)
 motion_mirroring = Vector2(415, 0)
 
 [node name="Layer06Rocks" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
-position = Vector2(208, 121)
-scale = Vector2(0.720888, 0.449946)
-texture = ExtResource("7_0jklj")
+position = Vector2(191.897, 73)
+scale = Vector2(1.08387, 0.715714)
+texture = ExtResource("5_5hywq")
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 0)
+motion_mirroring = Vector2(415, 0)
+
+[node name="Layer06Rocks" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2(222, 140)
+scale = Vector2(1.08126, 0.455079)
+texture = ExtResource("6_mkec5")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 0)
+motion_mirroring = Vector2(415, 0)
+
+[node name="Layer06Rocks" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(243.397, 117)
+scale = Vector2(1.08647, 0.715714)
+texture = ExtResource("7_pm7kk")
 
 [node name="Coins" type="Node2D" parent="."]
 
