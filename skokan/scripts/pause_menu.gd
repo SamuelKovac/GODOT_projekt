@@ -29,6 +29,8 @@ func _on_resume_pressed() -> void:
 
 # Called when the restart button is pressed
 func _on_restart_pressed() -> void:
+	GameManager.score -= GameManager.coins * 100
+	GameManager.coins = 0
 	resume_game()
 	get_tree().reload_current_scene()
 
