@@ -290,7 +290,7 @@ size = Vector2(10, 28)
 script = ExtResource("1_wat51")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(139, 103)
+position = Vector2(171, 139)
 zoom = Vector2(4, 4)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
