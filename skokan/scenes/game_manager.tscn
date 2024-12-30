@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwy7kgdtgupik"]
+[gd_scene load_steps=5 format=3 uid="uid://cwy7kgdtgupik"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_cdsrf"]
 [ext_resource type="PackedScene" uid="uid://bkmhimn3ox84r" path="res://scenes/gui.tscn" id="2_i0jbp"]
 [ext_resource type="PackedScene" uid="uid://da31x2yn1ce3q" path="res://scenes/PauseMenu.tscn" id="3_gtobo"]
+[ext_resource type="AudioStream" uid="uid://dcc2edno8n81r" path="res://audio/waiting-time-175800.mp3" id="4_lxhqy"]
 
 [node name="GameManager" type="Node"]
 script = ExtResource("1_cdsrf")
@@ -10,3 +11,9 @@ script = ExtResource("1_cdsrf")
 [node name="GUI" parent="." instance=ExtResource("2_i0jbp")]
 
 [node name="CanvasLayer" parent="." instance=ExtResource("3_gtobo")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_lxhqy")
+volume_db = -38.415
+autoplay = true
+parameters/looping = true
