@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bkmhimn3ox84r"]
+[gd_scene load_steps=9 format=3 uid="uid://bkmhimn3ox84r"]
 
 [ext_resource type="Texture2D" uid="uid://d1117361qgbao" path="res://sprites/Coin_Gems/MonedaD.png" id="1_4xe5f"]
+[ext_resource type="FontFile" uid="uid://q6fulhiing1a" path="res://Font/Jacquard12-Regular.ttf" id="1_b7d0m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q4s7r"]
 atlas = ExtResource("1_4xe5f")
@@ -48,20 +49,22 @@ animations = [{
 [node name="GUI" type="CanvasLayer"]
 
 [node name="coins" type="Label" parent="."]
-offset_left = 1037.0
-offset_top = 8.0
-offset_right = 1193.0
-offset_bottom = 91.0
-theme_override_font_sizes/font_size = 60
+offset_left = 1034.0
+offset_top = 3.0
+offset_right = 1092.0
+offset_bottom = 124.0
+theme_override_fonts/font = ExtResource("1_b7d0m")
+theme_override_font_sizes/font_size = 110
 text = "0"
 horizontal_alignment = 2
 
 [node name="score" type="Label" parent="."]
-offset_left = 1150.0
-offset_top = 90.0
-offset_right = 1251.0
-offset_bottom = 132.0
-theme_override_font_sizes/font_size = 30
+offset_left = 1137.0
+offset_top = 83.0
+offset_right = 1238.0
+offset_bottom = 144.0
+theme_override_fonts/font = ExtResource("1_b7d0m")
+theme_override_font_sizes/font_size = 60
 text = "0"
 horizontal_alignment = 2
 
