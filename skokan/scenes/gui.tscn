@@ -72,3 +72,11 @@ horizontal_alignment = 2
 position = Vector2(1227, 51)
 scale = Vector2(3.96887, 4.00662)
 sprite_frames = SubResource("SpriteFrames_4604v")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 35.0
+offset_top = 24.0
+offset_right = 283.0
+offset_bottom = 144.0
+theme_override_font_sizes/font_size = 50
+text = "00:00"

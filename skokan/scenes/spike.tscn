@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://hxrpq8kbdf4g"]
+
+[ext_resource type="Script" path="res://scripts/spike.gd" id="1_jbnxu"]
+[ext_resource type="Texture2D" uid="uid://iv684uyfe704" path="res://sprites/craftpix-net-675652-free-rocks-pixel-art-asset-pack/PNG/stalagmites/stalagmite4.png" id="1_xut4u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8mlrj"]
+size = Vector2(19, 134)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_jbnxu")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-1, 0, 17, 0, 14, 11, 10, 12, 7, 21, 5, 15, 5, 5, 1, 5, 0, 0)
+
+[node name="aktivacia" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="aktivacia"]
+position = Vector2(8.5, 67)
+shape = SubResource("RectangleShape2D_8mlrj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 512
+visibility_layer = 512
+position = Vector2(8.25, 10.25)
+scale = Vector2(0.5, 0.390909)
+texture = ExtResource("1_xut4u")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="aktivacia" to="." method="_on_aktivacia_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://cl6x7ifljr6eu"]
+[gd_scene load_steps=13 format=4 uid="uid://cl6x7ifljr6eu"]
 
 [ext_resource type="Texture2D" uid="uid://dqs1kfum6aqlk" path="res://sprites/mk_16_16_nature_tileset_godot/tileset_mk_16_16_nature_tileset_godot.png" id="2_7cfwx"]
 [ext_resource type="Texture2D" uid="uid://d284o161ogrme" path="res://sprites/Nature Landscapes Free Pixel Art/nature_4/1.png" id="4_1nvpr"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ddi1ek3dm5f07" path="res://sprites/Nature Landscapes Free Pixel Art/nature_4/2.png" id="5_vp6p6"]
 [ext_resource type="Texture2D" uid="uid://rir3w48pv40r" path="res://sprites/Nature Landscapes Free Pixel Art/nature_4/4.png" id="6_yx03s"]
 [ext_resource type="PackedScene" uid="uid://bdv58odhn65yh" path="res://scenes/player.tscn" id="7_s31ra"]
+[ext_resource type="PackedScene" uid="uid://hxrpq8kbdf4g" path="res://scenes/spike.tscn" id="9_tqqe3"]
 [ext_resource type="PackedScene" uid="uid://b5cjqqs51kcse" path="res://scenes/gcoin.tscn" id="9_yh7mv"]
 [ext_resource type="PackedScene" uid="uid://bcoxtb5xlehmt" path="res://scenes/next_lvl.tscn" id="72_3hkgq"]
 
@@ -399,6 +400,9 @@ terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/5 = SubResource("TileSetAtlasSource_ojjcj")
 
 [node name="lvl1" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("9_tqqe3")]
+position = Vector2(325, 51)
 
 [node name="Layer0" type="TileMapLayer" parent="."]
 use_parent_material = true

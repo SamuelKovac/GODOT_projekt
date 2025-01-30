@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://vy5ugd8iudto"]
+[gd_scene load_steps=15 format=3 uid="uid://vy5ugd8iudto"]
 
 [ext_resource type="PackedScene" uid="uid://bdv58odhn65yh" path="res://scenes/player.tscn" id="1_hfwbk"]
+[ext_resource type="PackedScene" uid="uid://hxrpq8kbdf4g" path="res://scenes/spike.tscn" id="1_xqjv8"]
 [ext_resource type="PackedScene" uid="uid://bcoxtb5xlehmt" path="res://scenes/next_lvl.tscn" id="3_jw1a7"]
 [ext_resource type="Texture2D" uid="uid://owufani8i7lc" path="res://sprites/Desert Parallax by Cryptogene/9 Background.png" id="3_n4aol"]
 [ext_resource type="Texture2D" uid="uid://up3e2mekva7y" path="res://sprites/Desert Parallax by Cryptogene/8 Stars2.png" id="4_j3jj4"]
@@ -15,6 +16,24 @@
 [ext_resource type="Texture2D" uid="uid://c8kh0snvv55r6" path="res://sprites/Desert Parallax by Cryptogene/1 Layer1.png" id="11_kyyec"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Node2D5" parent="." instance=ExtResource("1_xqjv8")]
+position = Vector2(14, 206)
+
+[node name="Node2D6" parent="." instance=ExtResource("1_xqjv8")]
+position = Vector2(-46, 316)
+
+[node name="Node2D" parent="." instance=ExtResource("1_xqjv8")]
+position = Vector2(381, 248)
+
+[node name="Node2D2" parent="." instance=ExtResource("1_xqjv8")]
+position = Vector2(605, 207)
+
+[node name="Node2D3" parent="." instance=ExtResource("1_xqjv8")]
+position = Vector2(634, 207)
+
+[node name="Node2D4" parent="." instance=ExtResource("1_xqjv8")]
+position = Vector2(666, 207)
 
 [node name="Player_node" parent="." instance=ExtResource("1_hfwbk")]
 
